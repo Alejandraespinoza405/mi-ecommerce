@@ -1,26 +1,18 @@
 {
   "compilerOptions": {
-    /* Language and Environment */
-    "target": "es2019",
-
-    /* Modules */
-    "module": "commonjs",
-
-    /* ⬇️ ESTAS DOS SON LAS CLAVES */
-    "rootDir": "src",
-    "outDir": "dist",
-
-    /* Interop & checks */
+    "outDir": "./dist",
+    "moduleResolution": "node",
+    "types": ["node"],
     "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "skipLibCheck": true,
+    "target": "es2016",
+    "module": "commonjs",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitAny": true,
-    "strictPropertyInitialization": false,
-    "skipLibCheck": true,
-
-    /* Decorators (dejamos lo tuyo) */
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true
+    "strictPropertyInitialization": false
   },
   "include": ["src"]
 }
