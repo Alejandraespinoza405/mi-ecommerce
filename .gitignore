@@ -1,2 +1,24 @@
-node_modules
+# === GENERAL ===
+node_modules/
 .env
+.env.local
+.env.production
+*.log
+.DS_Store
+
+# === FRONT (Next.js) ===
+.next/
+out/
+build/
+coverage/
+.vercel/
+next-env.d.ts
+
+# === BACK (TypeScript + Express) ===
+dist/
+*.tsbuildinfo
+
+# === MISC ===
+# archivos temporales o de sistema
+Thumbs.db
+*.pem

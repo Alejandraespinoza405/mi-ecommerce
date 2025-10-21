@@ -1,7 +1,8 @@
-'use server'
-
+'use server';
 import axios from "axios";
 
 export const axiosApiBack = axios.create({
-    baseURL: process.env.API_URL, //"http://localhost:3004",
+  baseURL: process.env.NEXT_PUBLIC_API_URL,
+  headers: { "Content-Type": "application/json" },
+  withCredentials: false,
 });
