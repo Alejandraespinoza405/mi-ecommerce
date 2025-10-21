@@ -5,11 +5,11 @@ import { Product } from "./Product";
 
 export class Category {
     @PrimaryGeneratedColumn()
-    id: number;
+    id!: number;
 
     @Column()
-    name: string;
+    name!: string;
 
     @OneToMany(() => Product, product => product.category)
-    products: Product[];
+    products!: Product[];
 }

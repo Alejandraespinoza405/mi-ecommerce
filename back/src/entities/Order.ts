@@ -15,19 +15,19 @@ import { Product } from "./Product";
 @Entity({ name: "orders" })
 export class Order {
   @PrimaryGeneratedColumn()
-  id: number;
+  id!: number;
 
   @Column()
-  status: string;
+  status!: string;
 
   @Column()
-  date: Date;
+  date!: Date;
 
   @ManyToOne(() => User, (user) => user.orders)
   @JoinColumn({ name: "userId" })
-  user: User;
+  user!: User;
 
   @ManyToMany(() => Product)
   @JoinTable()
-  products: Product[];
+  products!: Product[];
 }

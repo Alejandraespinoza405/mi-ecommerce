@@ -10,37 +10,37 @@ enum Role {
 @Entity({ name: "users" })
 export class User {
     @PrimaryGeneratedColumn()
-    id: number;
+    id!: number;
 
     @Column({
         nullable: false
     })
-    name: string;
+    name!: string;
 
     @Column({
         unique: true,
         nullable: false
     })
-    email: string;
+    email!: string;
 
     @Column()
-    address: string;
+    address!: string;
 
     @Column()
-    phone: string;
+    phone!: string;
 
     @Column({
         type: "enum",
         enum: Role,
         default: Role.USER
     })
-    role: Role;
+    role!: Role;
 
     @OneToOne(() => Credential)
     @JoinColumn()
-    credential: Credential;
+    credential!: Credential;
 
     @OneToMany(() => Order, order => order.user)
-    orders: Order[];
+    orders!: Order[];
 }
 

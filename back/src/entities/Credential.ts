@@ -3,8 +3,8 @@ import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 @Entity({ name: "credentials" })
 export class Credential {
     @PrimaryGeneratedColumn()
-    id: number;
+    id!: number;
 
     @Column()
-    password: string;
+    password!: string;
 }
