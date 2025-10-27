@@ -8,12 +8,13 @@ interface ProductsListProps {
 
 const ProductsList: FC<ProductsListProps> = ({ products }) => {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-      {products.map((product) => (
-        <ProductCard {...product} key={product.id} />
-      ))}
-      {!products?.length && <span> No hay productos para mostrar</span>}
-    </div>
+   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 place-items-center">
+  {products.map((product) => (
+    <ProductCard {...product} key={product.id} />
+  ))}
+  {!products?.length && <span>No hay productos para mostrar</span>}
+</div>
+
   );
 };
 
